@@ -1,0 +1,4 @@
+.bookmarks ul {
+  list-style-type: none;
+  padding-inline-start: 1em;
+}

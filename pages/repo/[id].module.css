@@ -1,0 +1,50 @@
+.repo {
+  padding: 1em;
+}
+
+.heart input[type="checkbox"] {
+  display: none;
+}
+
+.heart input[type="checkbox"] + label {
+  z-index: 100;
+  overflow: hidden;
+  height: 3em;
+  width: 3em;
+  display: block;
+  cursor: pointer;
+}
+
+.heart input[type="checkbox"] + label:before {
+  content: "";
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.heart input[type="checkbox"]:checked + label svg {
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  fill: rgb(225, 0, 0);
+}
+
+.heart input[type="checkbox"]:checked + label:after {
+  -webkit-animation: like-a 0.3s 0.2s forwards;
+  -moz-animation: like-a 0.3s 0.2s forwards;
+  animation: like-a 0.3s 0.2s forwards;
+}
+
+.heart input[type="checkbox"]:checked + label:before {
+  -webkit-animation: like-a 0.5s 0s forwards;
+  -moz-animation: like-a 0.5s 0s forwards;
+  animation: like-a 0.5s 0s forwards;
+}
+
+.heart label svg {
+  display: inline-flex;
+  vertical-align: middle;
+  width: 35px;
+  fill: rgb(200, 200, 200);
+}
